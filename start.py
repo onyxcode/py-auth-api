@@ -5,7 +5,9 @@ import sanic
 from sanic.exceptions import abort
 import os
 
-PORT = os.getenv('PORT') || 6969
+PORT = 6969
+if (os.getenv('PORT') != ""):
+    PORT = os.getenv('PORT')
 
 app = sanic.app.Sanic("Authentication")
 with open("config.json") as config:

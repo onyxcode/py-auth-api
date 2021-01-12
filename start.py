@@ -4,6 +4,8 @@ import pymongo
 import sanic
 from sanic.exceptions import abort
 
+PORT = os.getenv('PORT') || 6969
+
 app = sanic.app.Sanic("Authentication")
 with open("config.json") as config:
     config = json.load(config)
@@ -84,4 +86,4 @@ async def post_handler(request):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=6969, workers=2)
+    app.run(host="0.0.0.0", port=PORT, workers=2)

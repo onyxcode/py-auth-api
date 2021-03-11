@@ -14,6 +14,13 @@ You'll need to create a `config.json` file in the same directory with the follow
 ```
 The default port is `6969`.
 
+
+## Starting the API
+```
+python3 start.py
+```
+You're all set!
+
 ## But why?
 I searched far and wide for something like this but couldn't find anything. So I did it myself.
 Enjoy.
